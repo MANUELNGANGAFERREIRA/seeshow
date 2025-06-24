@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ver Publicações</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Usuário: <%= user %></h2>
+    <h3>Pontos: <%= points %> (você já viu <%= points %> publicações)</h3>
+
+    <div class="pub">
+      <h1><%= pub.title %></h1>
+      <p><%= pub.content %></p>
+    </div>
+
+    <form action="/next" method="POST">
+      <input type="hidden" name="filename" value="<%= filename %>">
+      <input type="hidden" name="redirectUrl" value="<%= pub.redirectUrl %>">
+      <input type="hidden" name="user" value="<%= user %>">
+      <button type="submit">👁 Ver Próxima</button>
+    </form>
+
+    <a class="btn" href="/publish?user=<%= user %>">📢 Publicar Agora</a>
+  </div>
+</body>
+</html>
