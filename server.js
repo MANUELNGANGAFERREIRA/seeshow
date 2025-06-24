@@ -7,9 +7,9 @@ const bodyParser = require('body-parser');
 const app = express();
 
 // Config GitHub
-const GITHUB_USERNAME = 'teu-usuario';
-const GITHUB_REPO = 'teu-repositorio';
-const GITHUB_TOKEN = 'teu-token-pessoal';
+const GITHUB_USERNAME = 'MANUELNGANGAFERREIRA';
+const GITHUB_REPO = 'seeshow';
+const GITHUB_TOKEN = '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';
 const GITHUB_BRANCH = 'main';
 
 const GITHUB_API = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents`;
